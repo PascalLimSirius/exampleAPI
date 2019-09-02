@@ -1,0 +1,65 @@
+.apicontent {
+
+    &__header {
+        margin-top: 0.7em;
+    }
+
+    &__list {
+
+        margin-top: 1em;
+        border-top: 2px dashed $grey-light;
+        padding: 1em;
+
+        h2 {
+            margin-bottom: 0 !important;
+        }
+
+        .content {
+            height: 125px;
+            overflow-y: auto;
+
+            li {
+                border-bottom: 1px solid $grey-lighter;
+
+                i {
+                    cursor: pointer;
+                    float: right;
+                    margin: 0.2em;
+                }
+
+                &:last-of-type {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    &__text {
+
+        margin-top: 1em;
+        border-top: 2px dashed $grey-light;
+        padding: 1em;
+        height: 350px;
+        overflow-y: auto;
+
+        .box {
+            padding: 0.7em;
+            padding-right: 0.3em;
+
+            figure {
+                width: 70px;
+            }
+        }
+    }
+
+    &__footer {
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: 2px dashed $grey-light;
+        text-align: center;
+
+        a {
+            margin-bottom: 0.25em;
+        }
+    }
+}

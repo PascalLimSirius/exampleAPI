@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="is-clipped">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WP REST API JS</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="phone">
+    <div class="screen">
+      <div class="columns is-mobile top">
+        <div class="column infos">@O'clock</div>
+        <div class="column hardware is-half">
+          <i class="fa fa-minus" aria-hidden="true"></i>
+          <i class="fa fa-circle-o" aria-hidden="true"></i>
+        </div>
+        <div class="column infos">
+          <div class="fa fa-signal" aria-hidden="true"></div>
+          <div class="fa fa-wifi" aria-hidden="true"></div>
+          <div class="fa fa-battery-three-quarters" aria-hidden="true"></div>
+        </div>
+      </div>
+      <main class="apicontent">
+        <header class="apicontent__header">
+          <h1 class="title is-size-4 has-text-centered">Bienvenue sur l'app oCooking</h1>
+        </header>
+        <div class="apicontent__list">
+          <h2 class="apicontent__list__subtitle subtitle is-size-5">Liste des recettes</h2>
+          <div class="content">
+            <ol id="list_items" type="1"></ol>
+          </div>
+        </div>
+        <div class="apicontent__text">
+        </div>
+        <footer class="apicontent__footer">
+          <a id="btn_list_recipe" class="button is-success">Lister les recettes</a>
+          <a id="btn_add_recipe" class="button is-warning">Ajouter une recette</a>
+          <a id="btn_del_recipe" class="button is-danger">Supprimer la recette</a>
+        </footer>
+      </main>
+    </div>
+
+  </div>
+
+  <template id="list_item_tpl">
+    <li>
+      <span class="list_items_text"></span>
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </li>
+  </template>
+
+  <template id="recipe_tpl">
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-centered">
+            <img src="./image/tarte.jpg" alt="Image">
+          </figure>
+          <p><small class="recipe_time"><i class="fa fa-clock-o" aria-hidden="true"></i></small></p>
+          <p><small class="recipe_baking"><i class="fa fa-fire" aria-hidden="true"></i></small></p>
+          <p><small class="recipe_cost"><i class="fa fa-money" aria-hidden="true"></i></small></p>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <div>
+              <strong class="content_title"></strong><br />
+              <small class="content_author">par</small>
+              <br>
+              <p class="content_text"></p>
+            </div>
+          </div>
+          <div class="content recipe_ingredient">
+            <strong class="has-text-grey-dark">Ingredients:</strong><br />
+          </div>
+        </div>
+      </article>
+    </div>
+  </template>
+
+  <template class="ingredient_tpl">
+    <span class="is-small">Oeuf</span>
+  </template>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
